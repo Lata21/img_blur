@@ -1,0 +1,10 @@
+import cv2
+image = cv2.imread('darshan_raval.jpeg')
+if image is None:
+    print("Error: Unable to load the image.")
+else:
+    blur_image = cv2.medianBlur(image, 5)
+    cv2.imshow('Original Image', image)
+    cv2.imshow('Blur Image', blur_image)
+    cv2.waitKey(5000)
+    cv2.destroyAllWindows()
